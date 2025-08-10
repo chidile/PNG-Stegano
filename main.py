@@ -18,7 +18,8 @@ def showimage():
                                           title='Select Image File',
                                           filetypes=(("PNG file", "*.png"),
                                                      ("JPG File","*.jpg"),
-                                                     ("All file", "*.txt")))
+                                                     ("All file", "*.txt")
+                                                     ))
     img = Image.open(filename)
     img = ImageTk.PhotoImage(img)
     lbl.configure(image=img, width=250, height=250)
@@ -81,7 +82,8 @@ frame4.place(x=360,y=370)
 
 Button(frame4, text="Hide Data", width=10, height=2, font="arial 14 bold", command=Hide).place(x=20,y=30)
 Button(frame4, text="Show Data", width=10, height=2, font="arial 14 bold", command=Show).place(x=180,y=30)
-Label(frame4, text="Picture, Image, Photo Files",bg="#2f4155", fg="yellow").place(x=20, y=5)
+Label(frame4, text="Data Management ",bg="#2f4155", fg="yellow").place(x=20, y=5)
 
+Label(root, text="Credit: FASA Team", bg="#2f4155", fg="#d7fffb").place(x= 10, y=475)
 
 root.mainloop()
